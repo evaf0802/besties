@@ -1,0 +1,21 @@
+{
+  "name": "vue-parc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.2.30",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@parcel/transformer-vue": "^2.2.1",
+    "@vue/compiler-sfc": "^3.2.30",
+    "parcel": "^2.2.1"
+  }
+}
