@@ -1,0 +1,18 @@
+{
+  "boxes": [
+    {
+      "url": "../assets/tanjiro.jpeg",
+      "button": "Tanjiro"
+    },
+    {
+      "url": "../assets/zenitsu.jpeg",
+      "button": "Zenitsu"
+    },
+    {
+      "url": "../assets/inosuke.jpeg",
+      "button": "Inosuke"
+    }
+  ]
+}
+
+
