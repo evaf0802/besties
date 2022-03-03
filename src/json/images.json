@@ -1,16 +1,19 @@
 {
   "boxes": [
     {
-      "url": "../assets/tanjiro.jpeg",
-      "button": "Tanjiro"
+      "img": "../assets/tanjiro.jpeg",
+      "button": "Tanjiro",
+      "color": "crimson"
     },
     {
-      "url": "../assets/zenitsu.jpeg",
-      "button": "Zenitsu"
+      "img": "../assets/zenitsu.jpeg",
+      "button": "Zenitsu",
+      "color": "yellow"
     },
     {
-      "url": "../assets/inosuke.jpeg",
-      "button": "Inosuke"
+      "img": "../assets/inosuke.jpeg",
+      "button": "Inosuke",
+      "color": "cornflowerblue"
     }
   ]
 }
