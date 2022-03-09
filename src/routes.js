@@ -3,9 +3,21 @@ import Character from "./views/characters.vue";
 
 const routes = [
   { path: "/", name: "home", component: Home },
-  { path: "/tanjiro", name: "tanjiro", component: Character },
-  { path: "/zenitsu", name: "zenitsu", component: Character },
-  { path: "/inosuke", name: "inosuke", component: Character },
+  {
+    path: "/tanjiro",
+    component: Character,
+    props: { id: "Tanjiro" },
+  },
+  {
+    path: "/zenitsu",
+    component: Character,
+    props: { id: "Zenitsu" },
+  },
+  {
+    path: "/inosuke",
+    component: Character,
+    props: { id: "Inosuke" },
+  },
 ];
 
 export default routes;

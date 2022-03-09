@@ -8,7 +8,9 @@
         "his younger sister alive but a demon",
         "a sweet boi",
         "10/10 guy"
-      ]
+      ],
+      "img": "tanjiro.jpeg",
+      "color": "crimson"
     },
     {
       "name": "Zenitsu",
@@ -18,7 +20,9 @@
         "strong as heck when asleep",
         "loves nezuko",
         "has a sparrow as his animal"
-      ]
+      ],
+      "img": "zenitsu.jpeg",
+      "color": "yellow"
     },
     {
       "name": "Inosuke",
@@ -28,7 +32,9 @@
         "loves to fight",
         "can dislocate his arms willy nilly",
         "ripped but has a feminine face"
-      ]
+      ],
+      "img": "inosuke.jpeg",
+      "color": "cornflowerblue"
     }
   ]
 }

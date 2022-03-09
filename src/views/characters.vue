@@ -1,46 +1,55 @@
 <template>
   <div>
+    <div class="container">
+      <v-img class="pic" :src="getImgUrl(character.img)"></v-img>
+      <span class="title">
+        <h>About {{ character.name }}</h>
+        <p>{{ character.img }}</p>
+      </span>
+      <span class="list">
+        <ul>
+          <li v-for="text in character.desc" v-bind:key="text">
+            {{ text }}
+          </li>
+        </ul>
+      </span>
+      <div class="qt">
+        <p>{{ character.quote }}</p>
+      </div>
+    </div>
     <button @click="router.push('/')" id="homeButton">
       <router-link to="/">Home</router-link>
     </button>
-    <div class="container">
-      <div v-for="character in characters" v-bind:key="character.id">
-        <span class="title">
-          <h>About {{ character.name }}</h>
-        </span>
-        <span class="list">
-          <ul>
-            <li v-for="text in character.desc" v-bind:key="text">
-              {{ text }}
-            </li>
-          </ul>
-        </span>
-        <div class="qt">
-          <p>{{ character.quote }}</p>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
 import facts from "../json/facts.json";
 export default {
+  //  props: { id },
   data() {
     return {
-      characters: facts.character,
-      descript: facts.character.desc,
+      character: facts.character[0]//.find((name) => name === id),
     };
+  },
+  methods: {
+    getImgUrl(pic) {
+      return require("../assets/" + pic);
+    },
   },
 };
 </script>
-  </div>
+
 <style scoped>
+@media all and (max-width: 500px) {
+  .container {
+    flex-shrink: 6;
+  }
+}
 #homeButton {
-  position: absolute;
-  right: 20px;
+  justify-content: flex-end;
   top: 20px;
-  width: 100px;
+  width: 300px;
   height: 50px;
   border-radius: 20%;
   font-family: monospace;
@@ -48,11 +57,28 @@ export default {
 }
 .container {
   display: flex;
+  flex-basis: 30%;
   font-family: monospace;
-  gap: 20px;
+  gap: 30px;
+  margin: 20px;
+  flex-wrap: nowrap;
+}
+.list,
+.qt {
+  font-size: 18px;
 }
 .title {
   font-size: 60px;
 }
-
+.list {
+  display: flex;
+  align-self: flex-start;
+}
+.pic {
+  position: relative;
+  margin-top: 30px;
+  width: 100px;
+  height: 234px;
+  border: 10px solid;
+}
 </style>
