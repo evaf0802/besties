@@ -1,7 +1,11 @@
 <template>
   <div>
-    <div class="flexImages">
-      <div v-for="character in characters" v-bind:key="character.name">
+    <div class="container">
+      <div
+        class="wrapper"
+        v-for="character in characters"
+        v-bind:key="character.name"
+      >
         <img
           :src="getImgUrl(character.name.toLowerCase())"
           class="image"
@@ -16,17 +20,6 @@
         </button>
       </div>
     </div>
-    <!--    <div class="flexBtns">
-      <div v-for="character in characters" v-bind:key="character.name">
-        <button
-          @click="$router.push(character.name.toLowerCase())"
-          class="btn"
-          :style="{ 'background-color': character.color }"
-        >
-          {{ character.name }}
-        </button>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -50,19 +43,21 @@ export default {
 </script>
 
 <style scoped>
-.flexImages,
-.flexBtns {
+.container {
   display: flex;
+}
+.wrapper {
+  position: relative;
   justify-content: space-around;
   align-items: center;
-  margin-right: 200px;
-  margin-left: 200px;
 }
 .image {
   border: 10px solid;
   border-radius: 20%;
   margin-top: 100px;
   margin-bottom: 10px;
+  width: 300px;
+  height: 360px;
 }
 .btn {
   font-family: monospace;
